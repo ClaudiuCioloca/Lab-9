@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $.ajax
+        ({
+        	url: "https://ro.lipsum.com/",
+        	crossOrigin: null,
+        	success: function(result)
+        			{
+            		$("#text").html(result);
+        			}
+    	});
+    });
+});
+</script>
+</head>
+<body>
+ <button id="button">AjaxRequest</button>
+ <h2 id="text">Let jQuery AJAX Change This Text</h2>
+
+</body>
+</html>
